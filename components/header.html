@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Header</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    header {
+      width: 100;
+      height: 56px;
+
+      display: flex;
+      align-items: center;
+
+      padding: 4px;
+      box-shadow: 2px 2px 2px 1px rgba(0, 0, 0, 0.2);
+    }
+
+    #menuIcon {
+      width: 40px;
+      height: 40px;
+    }
+
+    .mainnavContainer {
+      width: 100%;
+      min-height: 40vh;
+      position: absolute;
+      top: 57px;
+      left: 0;
+      box-shadow: 2px 2px 2px 2px rgba(0, 0, 0, 0.2);
+      padding: 60px 8px;
+    }
+
+    .mainNavList {
+      padding: 0;
+      list-style: none;
+      font-size: 1.4rem;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+      gap: 40px;
+      justify-content: center;
+    }
+    .mainNavList_item {
+      cursor: pointer;
+    }
+
+    .hide{
+        display: none;
+    }
+  </style>
+  <body>
+    <header>
+      <span>
+        <svg
+          id="menuIcon"
+          xmlns="http://www.w3.org/2000/svg"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke-width="1.5"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M3.75 5.25h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5m-16.5 4.5h16.5"
+          />
+        </svg>
+      </span>
+      <div id="mainNavContainer" class="mainnavContainer hide">
+        <nav class="mainNav">
+          <ul class="mainNavList">
+            <li class="mainNavList_item">Opcion 1</li>
+            <li class="mainNavList_item">Opcion 2</li>
+            <li class="mainNavList_item">Opcion 3</li>
+            <li class="mainNavList_item">Opcion 4</li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+  </body>
+  <script defer>
+    const menuIcon = document.querySelector("#menuIcon");
+    const mainNavContainer = document.querySelector('#mainNavContainer');
+    menuIcon.addEventListener('click', ()=>{
+        mainNavContainer.classList.toggle('hide');
+    });
+  </script>
+</html>

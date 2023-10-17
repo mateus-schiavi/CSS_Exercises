@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+    .catalogo {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+
+      padding: 20px;
+      gap: 20px;
+      /* width: 100vw;
+            height: 100vh; */
+    }
+    .imgConatiner {
+      width: 150px;
+      height: 240px;
+      border-radius: 18px;
+      box-shadow: 4px 8px 8px 4px rgba(0, 0, 0, 0.2);
+    }
+
+    .imgConatiner > img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      border-radius: 18px;
+    }
+  </style>
+  <body>
+    <section class="catalogo">
+      <div class="imgConatiner">
+        <img src="https://loremflickr.com/320/240" alt="Random Img" />
+      </div>
+      <div class="imgConatiner">
+        <img src="https://loremflickr.com/320/240" alt="Random Img" />
+      </div>
+    </section>
+  </body>
+</html>

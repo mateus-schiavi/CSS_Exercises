@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <style>
+    #content {
+
+      display: flex;
+      flex-wrap: wrap-reverse;
+      gap: 10px;
+    }
+
+    .box {
+      min-width: 60px;
+      flex-grow: 1;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+
+    .box1 {
+      flex-grow: 2;
+      min-width: 200px;
+      border: 3px solid rgba(0, 0, 0, 0.2);
+    }
+  </style>
+  <body>
+    <h4>This is a Flex-Grow</h4>
+    <h5>A,B,C and F are flex-grow:1 . D and E are flex-grow:2 .</h5>
+    <div id="content">
+      <div class="box" style="background-color: red">A</div>
+      <div class="box1" style="background-color: lightblue">B</div>
+      <div class="box" style="background-color: yellow">C</div>
+      <!-- <div class="box1" style="background-color: brown">D</div>
+      <div class="box1" style="background-color: lightgreen">E</div>
+      <div class="box" style="background-color: brown">F</div> -->
+    </div>
+  </body>
+</html>
